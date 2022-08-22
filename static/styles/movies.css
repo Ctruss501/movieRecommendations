@@ -1,0 +1,33 @@
+body {
+  background: #3d3d3d;
+  display: flex;
+}
+.rec {
+  padding-left: 150px;
+  color: #ab67ef;
+  line-height: 9vw;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+}
+.choice {
+  padding-left: 150px;
+  color: #ab67ef;
+  line-height: 9vw;
+  font-size: 40px;
+  text-shadow: 0 0 3vw #00d6da;
+  margin: 0;
+  text-align: center;
+}
+.movie_list{
+  margin-top: 90px;
+  position: absolute;
+  right: 20%;
+}
+.movie_list p {
+  color: #00d6da;
+  font-weight: bold;
+  width: 100%;
+  font-size: 16px;
+  font-family: monospace;
+}

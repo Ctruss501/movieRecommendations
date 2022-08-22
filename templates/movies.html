@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+            <link rel="stylesheet" href="{{ url_for('static',filename='styles/movies.css') }}">
+</head>
+<body>
+      {%if s == 'Sorry'%}
+      <div class="choice" style="position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0 -50% 0 0;
+      transform: translate(-50%, -50%);text-align: center;">
+        <h4>{{movie}}</h4>
+        <h4>Try another movie or check your spelling.</h4>
+      </div>
+
+      {%else%}
+          <div>
+              <h4 class="rec">Recommended movies for:<br /></h4>
+              <h4 class="choice">{{movie[0]}}</h4>
+          </div>
+          <div class="movie_list">
+              <p>{{movie[1]}}</p>
+              <p>{{movie[2]}}</p>
+              <p>{{movie[3]}}</p>
+              <p>{{movie[4]}}</p>
+              <p>{{movie[5]}}</p>
+              <p>{{movie[6]}}</p>
+              <p>{{movie[7]}}</p>
+              <p>{{movie[8]}}</p>
+              <p>{{movie[9]}}</p>
+              <p>{{movie[10]}}</p>
+              <p>{{movie[11]}}</p>
+              <p>{{movie[12]}}</p>
+              <p>{{movie[13]}}</p>
+              <p>{{movie[14]}}</p>
+              <p>{{movie[15]}}</p>
+          </div>
+      {%endif%}
+</body>
+</html>

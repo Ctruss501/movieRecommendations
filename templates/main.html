@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommender</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+        <script type="text/javascript"> var films = {{suggestions|tojson}};</script>
+</head>
+<body>
+<div class="header">
+    <form action="{{url_for('search_movies')}}">
+        <h1>Movie Recommender</h1>
+        <div class="box">
+            <h3 style="text-align: center">What movie would you like<br/>recommendations on?</h3>
+            <input type="text" class="search" id="autoComplete" autocomplete="off" name="movie" placeholder="Search movie..">
+            <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+            <script type="text/javascript" src="{{url_for('static', filename='autocomplete.js')}}"></script>
+            <button class="search-btn" target="_blank" type="submit">Search</button>
+        </div>
+    </form>
+</div>
+{{movie}}
+</body>
+</html>
